@@ -25,6 +25,9 @@ module.exports = {
     // ESLint 규칙을 지정합니다. extends에서 지정된 규칙을 덮어 쓸수도 있습니다.
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
+    "@typescript-eslint/no-explicit-any": "off", // Unexpected any. Specify a different type 문구 제거
+    "@typescript-eslint/explicit-module-boundary-types": "off", // React, { ReactElement } from "react" 설정 안함
+    "@typescript-eslint/no-unused-vars": "off", // 사용하지 않는 프로퍼티 경고 문구 제거
   },
   settings: {
     react: {

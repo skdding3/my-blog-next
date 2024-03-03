@@ -1,7 +1,12 @@
 import React from "react";
+import Container from "../../components/Container";
 
 const blog = () => {
-  return <div className="text-lg">blog</div>;
+  return (
+    <Container>
+      <span className="font-bold">Blog</span>
+    </Container>
+  );
 };
 
 export default blog;
