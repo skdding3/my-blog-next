@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Navigation from "./navigation";
 import metadata from "../data/metadata";
+import Navigation from "./Navigation";
 
 const Container = (props: any) => {
   return (
