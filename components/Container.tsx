@@ -1,7 +1,11 @@
 import Head from "next/head";
+<<<<<<< HEAD
 import Image from "next/image";
 import Navigation from "./navigation";
+=======
+>>>>>>> 4005054d203f1f8dd3962295e19caab512c1dfad
 import metadata from "../data/metadata";
+import Navigation from "./Navigation";
 
 const Container = (props: any) => {
   return (
