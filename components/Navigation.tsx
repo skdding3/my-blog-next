@@ -5,8 +5,8 @@ const Navigation = () => {
   return (
     <nav>
       {nav.map((nav) => (
-        <Link href={nav.link} key={nav.title}>
-          <a className={`mr-5`}>{nav.title}</a>
+        <Link href={nav.link} key={nav.title} className="mr-5">
+          {nav.title}
         </Link>
       ))}
     </nav>
