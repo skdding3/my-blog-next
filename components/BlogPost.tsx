@@ -1,16 +1,12 @@
 import Link from "next/link";
 
-const BlogPost = () => {
+const BlogPost = ({ date, title, des, slug }: any) => {
   return (
-    <Link href="/blog" passHref>
+    <Link href={`/blog/${slug}`} passHref>
       <a className="w-full my-7 hover:-translate-x-1.5">
-        <div className="font-medium text-xs text-gray-400">2024.03.06</div>
-        <div className={`font-extrabold text-2xl mt-2`}>
-          💙 게시물 제목이 나타납니다.
-        </div>
-        <div className={`font-medium text-gray-600 text-xl mt-1`}>
-          게시물 설명이 나타납니다.
-        </div>
+        <div className="font-medium text-xs text-gray-400">{date}</div>
+        <div className={`font-extrabold text-2xl mt-2`}>{title}</div>
+        <div className={`font-medium text-gray-600 text-xl mt-1`}>{des}</div>
       </a>
     </Link>
   );

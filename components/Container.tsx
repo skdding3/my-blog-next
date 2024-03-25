@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import Navigation from "./navigation";
 import metadata from "../data/metadata";
+import Navigation from "./Navigation";
 
 const Container = (props: any) => {
   return (
