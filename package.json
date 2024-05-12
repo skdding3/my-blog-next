@@ -29,6 +29,8 @@
     "typescript": "5.4.3"
   },
   "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "glob": "^10.3.12",
     "install": "^0.13.0"
   }
 }
