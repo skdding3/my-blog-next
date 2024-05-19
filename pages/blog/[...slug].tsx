@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { getAllPosts } from "../../@/lib/post";
+import { serializeMdx } from "../../@/lib/mdx";
 
 export const getStaticPaths: GetStaticPaths = () => {
   const posts = getAllPosts();
@@ -10,7 +11,7 @@ export const getStaticPaths: GetStaticPaths = () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slugs } = params as { slugs: string[] };
 
   const slug = `/posts/${[...slugs].join("/")}`;
@@ -22,9 +23,11 @@ export const getStaticProps: GetStaticProps = ({ params }) => {
     };
   }
 
+  const mdx = await serializeMdx(post.content);
+
   return {
     props: {
-      slug,
+      mdx,
     },
   };
 };
